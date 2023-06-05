@@ -1,0 +1,214 @@
+@import "./Variable.scss";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300;400;500;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+  z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color100;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color300;
+  border-radius: 10px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $color400;
+}
+
+// Section
+.section_header {
+  @include size(100%, 90vh, 5%);
+  @include flex(column, flex-end, center, 2em);
+  background-size: cover;
+  background-image: url(../assets/home.png);
+
+  h1 {
+    @include title($bigTitle);
+  }
+
+  button {
+    @include button($subTitle);
+  }
+}
+
+.section_list {
+  background-color: $color200;
+  padding: 3% 10%;
+  @include flex(column, flex-start, center, 3rem);
+
+  h1 {
+    @include title($subTitle);
+    font-weight: 600;
+  }
+
+  .list_content {
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    @include grid(300px, 1fr, 2rem);
+    width: 100%;
+    border: 2px solid $color500;
+    background-color: $color100;
+  }
+}
+
+.section_ngopi {
+  @include size(100%, 50vh, 5% 10%);
+  @include flex(column, flex-start, flex-start, 1rem);
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/about.png);
+
+  h1 {
+    font-size: $title;
+    width: 600px;
+    font-weight: 500;
+  }
+
+  button {
+    @include button($subTitle);
+  }
+}
+
+.section_about {
+  @include flex(row, space-between, center, 1rem);
+  @include size(100%, 80vh, 5% 10%);
+  background-color: $color200;
+
+  div {
+    @include flex(column, center, center, 1rem);
+    width: 100%;
+
+    h1 {
+      font-size: $title;
+    }
+
+    p {
+      font-size: $subTitle;
+      font-weight: 600;
+    }
+  }
+}
+
+.section_footer {
+  padding: 3% 10%;
+  @include flex(row, center, center, 5rem);
+
+  .left {
+    @include flex(row, center, center, 1rem);
+    h1 {
+      font-size: $title;
+    }
+
+    img {
+      width: 70px;
+    }
+  }
+
+  .right {
+    @include flex(column, center, center, 5px);
+
+    h2 {
+      font-size: $subTitle;
+      font-weight: 700;
+    }
+
+    p {
+      &:nth-child(1) {
+        font-size: $bigParagraph;
+        font-weight: 600;
+      }
+
+      &:nth-child(2) {
+        font-size: $paragraph;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Components
+.component_nav {
+  @include flex(column, center, center, 0);
+  width: 100%;
+
+  .top {
+    @include flex(column, center, center, 0);
+    width: 100%;
+    padding: 10px 0;
+    background-color: $color100;
+
+    h1 {
+      font-size: $title;
+    }
+  }
+
+  .bottom {
+    @include flex(row, center, center, 1rem);
+    background-color: $color000;
+    border: 1px solid $color500;
+    width: 100%;
+    padding: 10px 0;
+
+    .menu {
+      transition: $fast;
+      font-size: $bigParagraph;
+      text-decoration: none;
+      color: $color400;
+
+      &:hover {
+        transition: $fast;
+        color: $color300;
+      }
+    }
+  }
+}
+
+.component_card_list {
+  @include flex(column, flex-start, center, 0);
+  width: 100%;
+  background-color: $color300;
+  border-radius: 7px;
+  overflow: hidden;
+  border: 1px solid $color500;
+  // box-shadow: 0 0 5px $color400;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-radius: 7px;
+    text-transform: capitalize;
+    font-size: $subTitle;
+    font-weight: 400;
+    border-bottom: 1px solid $color500;
+  }
+  div {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
