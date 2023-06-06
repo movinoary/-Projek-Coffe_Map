@@ -6,7 +6,7 @@ import { dataPhoto } from "../assets/data/dataPhoto";
 const Detail = () => {
   const { key } = useParams();
   const [data, setData] = useState([]);
-  const [bigPoto, setBigPoto] = useState("");
+  const [bigPoto, setBigPoto] = useState(data?.Tempat?.[0]?.foto);
 
   useEffect(() => {
     getData();
@@ -32,22 +32,21 @@ const Detail = () => {
     setBigPoto(data?.Tempat?.[0]?.foto);
   };
 
+  console.log(bigPoto);
+
   return (
     <main className="page_detail_cafe">
       <section className="left">
-        <div>
-          <img src={bigPoto} alt={data.Nama} width={500} />
+        <div className="big_photo">
+          <img
+            src={bigPoto !== undefined ? bigPoto : data?.Tempat?.[0]?.foto}
+            // src={bigPoto}
+            alt={data.Nama}
+            width={500}
+          />
         </div>
         <div className="list_poto">
           {data?.Tempat?.map((item, index) => (
-            <img
-              key={index}
-              src={item?.foto}
-              alt={data?.Nama}
-              onClick={() => setBigPoto(item?.foto)}
-            />
-          ))}
-          {data?.Menu?.map((item, index) => (
             <img
               key={index}
               src={item?.foto}
@@ -62,19 +61,19 @@ const Detail = () => {
         <div className="content">
           <div>
             <p>Operasional </p>
-            <p>{data.properties["Jam Operasional"]}</p>
+            <p>: {data?.properties?.["Jam Operasional"]}</p>
           </div>
           <div>
             <p>Alamat </p>
-            <p>{data.properties["Alamat"]}</p>
+            <p>: {data?.properties?.["Alamat"]}</p>
           </div>
           <div>
             <p>Social Media </p>
-            <p>{data.properties["Social Media"]}</p>
+            <p>: {data?.properties?.["Social Media"]}</p>
           </div>
           <div>
             <p>Kontak </p>
-            <p>{data.properties["Contact Person"]}</p>
+            <p>: {data?.properties?.["Contact Person"]}</p>
           </div>
         </div>
         <button>Menu</button>

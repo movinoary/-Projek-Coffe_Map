@@ -10,16 +10,58 @@ import Monday_Coffee_Dago_5_Menu from "../foto dokumen coffee shop/3. Monday Cof
 import Monday_Coffee_Dago_6_Menu from "../foto dokumen coffee shop/3. Monday Coffee Dago/3. Foto makanan dan minuman/Monday_Coffee_Dago_6_Menu.jpg";
 
 import Micasa_1 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_1.PNG";
+import Micasa_2 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_2.PNG";
+import Micasa_3 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_3.PNG";
+import Micasa_4 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_4.PNG";
+import Micasa_5 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_5.PNG";
+import Micasa_6 from "../foto dokumen coffee shop/4. Micasa/1. Foto tempat/Micasa_6.PNG";
+
 import Kopi_Sajati_Dago_1 from "../foto dokumen coffee shop/5. Kopi Sajati Dago/1. Foto tempat/Kopi_Sajati_Dago_1.jpg";
+import Kopi_Sajati_Dago_2 from "../foto dokumen coffee shop/5. Kopi Sajati Dago/1. Foto tempat/Kopi_Sajati_Dago_2.jpg";
+import Kopi_Sajati_Dago_3 from "../foto dokumen coffee shop/5. Kopi Sajati Dago/1. Foto tempat/Kopi_Sajati_Dago_3.jpg";
+import Kopi_Sajati_Dago_4 from "../foto dokumen coffee shop/5. Kopi Sajati Dago/1. Foto tempat/Kopi_Sajati_Dago_4.webp";
+
 import Desa_Coffee_Space_1 from "../foto dokumen coffee shop/6. Desa Coffee Space/1. foto tempat/Desa_Coffee_Space_1.jpg";
+import Desa_Coffee_Space_2 from "../foto dokumen coffee shop/6. Desa Coffee Space/1. foto tempat/Desa_Coffee_Space_2.jpg";
+import Desa_Coffee_Space_3 from "../foto dokumen coffee shop/6. Desa Coffee Space/1. foto tempat/Desa_Coffee_Space_3.jpg";
+import Desa_Coffee_Space_4 from "../foto dokumen coffee shop/6. Desa Coffee Space/1. foto tempat/Desa_Coffee_Space_4.jpg";
+import Desa_Coffee_Space_5 from "../foto dokumen coffee shop/6. Desa Coffee Space/1. foto tempat/Desa_Coffee_Space_5.jpg";
+
 import Communal_Coffee_1 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_1.jpg";
+import Communal_Coffee_2 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_2.jpg";
+import Communal_Coffee_3 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_3.jpg";
+import Communal_Coffee_4 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_4.jpg";
+import Communal_Coffee_5 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_5.jpg";
+import Communal_Coffee_6 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_6.jpg";
+import Communal_Coffee_7 from "../foto dokumen coffee shop/7. Communal Coffee/1. foto tempat/Communal_Coffee_7.jpg";
+
 import Kurva_Coffee_1 from "../foto dokumen coffee shop/8. Kurva Coffee/1. foto tempat/Kurva_Coffee_1.jpg";
+import Kurva_Coffee_2 from "../foto dokumen coffee shop/8. Kurva Coffee/1. foto tempat/Kurva_Coffee_2.jpg";
+import Kurva_Coffee_3 from "../foto dokumen coffee shop/8. Kurva Coffee/1. foto tempat/Kurva_Coffee_3.jpg";
+import Kurva_Coffee_4 from "../foto dokumen coffee shop/8. Kurva Coffee/1. foto tempat/Kurva_Coffee_4.jpg";
+
 import Happy_Space_Coffee_1 from "../foto dokumen coffee shop/9. Happy Space Coffee/1. foto tempat/Happy_Space_Coffee_1.jpg";
+import Happy_Space_Coffee_2 from "../foto dokumen coffee shop/9. Happy Space Coffee/1. foto tempat/Happy_Space_Coffee_2.jpg";
+import Happy_Space_Coffee_3 from "../foto dokumen coffee shop/9. Happy Space Coffee/1. foto tempat/Happy_Space_Coffee_3.jpg";
+import Happy_Space_Coffee_4 from "../foto dokumen coffee shop/9. Happy Space Coffee/1. foto tempat/Happy_Space_Coffee_4.jpg";
+import Happy_Space_Coffee_5 from "../foto dokumen coffee shop/9. Happy Space Coffee/1. foto tempat/Happy_Space_Coffee_5.jpg";
+
 import Saraga_Coffee_1 from "../foto dokumen coffee shop/10. Saraga Coffee/1. foto tempat/Saraga_Coffee_1.jpg";
 import Coffee_1994_1 from "../foto dokumen coffee shop/11. 1994 Coffee/1. foto tempat/1994_Coffee_1.jpg";
+
 import Kozi_Coffee_X_Marawa_1 from "../foto dokumen coffee shop/12. Kozi Coffee X Marawa/1. foto tempat/Kozi_Coffee_X_Marawa_1.jpg";
+import Kozi_Coffee_X_Marawa_2 from "../foto dokumen coffee shop/12. Kozi Coffee X Marawa/1. foto tempat/Kozi_Coffee_X_Marawa_2.jpg";
+import Kozi_Coffee_X_Marawa_3 from "../foto dokumen coffee shop/12. Kozi Coffee X Marawa/1. foto tempat/Kozi_Coffee_X_Marawa_3.jpg";
+import Kozi_Coffee_X_Marawa_4 from "../foto dokumen coffee shop/12. Kozi Coffee X Marawa/1. foto tempat/Kozi_Coffee_X_Marawa_4.jpg";
+
 import Urra_Caffe_1 from "../foto dokumen coffee shop/13. Urra Caffe/1. foto tempat/Urra_Caffe_1.jpg";
+
 import Ali_Joy_Coffee_1 from "../foto dokumen coffee shop/14. Ali Joy Coffee/1. foto tempat/Ali_Joy_Coffee_1.jpg";
+import Ali_Joy_Coffee_2 from "../foto dokumen coffee shop/14. Ali Joy Coffee/1. foto tempat/Ali_Joy_Coffee_2.jpg";
+import Ali_Joy_Coffee_3 from "../foto dokumen coffee shop/14. Ali Joy Coffee/1. foto tempat/Ali_Joy_Coffee_3.jpg";
+import Ali_Joy_Coffee_4 from "../foto dokumen coffee shop/14. Ali Joy Coffee/1. foto tempat/Ali_Joy_Coffee_4.jpg";
+import Ali_Joy_Coffee_5 from "../foto dokumen coffee shop/14. Ali Joy Coffee/1. foto tempat/Ali_Joy_Coffee_5.jpg";
+
 import Jiwan_Coffee_1 from "../foto dokumen coffee shop/15. Jiwan Coffee/1. foto tempat/Jiwan_Coffee_1.jpg";
 import Filosofi_Kopi_Bandung_1 from "../foto dokumen coffee shop/16. Filosofi Kopi Bandung/1. foto tempat/Filosofi_Kopi_Bandung_1.jpg";
 import One_Eighty_Coffee_Music_1 from "../foto dokumen coffee shop/17. One Eighty Coffee _ Music/1. foto tempat/One_Eighty_Coffee_Music_1.jpg";
@@ -73,51 +115,149 @@ export const dataPhoto = [
   {
     key: "5e1d82bb-aec7-49d1-ae37-c507cc500186",
     Nama: "MiCasa Social Space",
-    Tempat: {
-      foto_1: Micasa_1,
-    },
+    Tempat: [
+      {
+        foto: Micasa_1,
+      },
+      {
+        foto: Micasa_2,
+      },
+      {
+        foto: Micasa_3,
+      },
+      {
+        foto: Micasa_4,
+      },
+      {
+        foto: Micasa_5,
+      },
+      {
+        foto: Micasa_6,
+      },
+    ],
   },
   {
     key: "ce57c12a-14cc-42c5-8a9f-e7f216d48922",
     Nama: "Kopi Sajati Dago",
-    Tempat: {
-      foto_1: Kopi_Sajati_Dago_1,
-    },
+    Tempat: [
+      {
+        foto: Kopi_Sajati_Dago_1,
+      },
+      {
+        foto: Kopi_Sajati_Dago_2,
+      },
+      {
+        foto: Kopi_Sajati_Dago_3,
+      },
+      {
+        foto: Kopi_Sajati_Dago_4,
+      },
+    ],
   },
   {
     key: "e0a08759-3d5a-428b-8a8e-7b0e4edf7933",
     Nama: "Communal Coffee Indonesia",
-    Tempat: {
-      foto_1: Communal_Coffee_1,
-    },
+    Tempat: [
+      {
+        foto: Communal_Coffee_1,
+      },
+      {
+        foto: Communal_Coffee_2,
+      },
+      {
+        foto: Communal_Coffee_3,
+      },
+      {
+        foto: Communal_Coffee_4,
+      },
+      {
+        foto: Communal_Coffee_5,
+      },
+      {
+        foto: Communal_Coffee_6,
+      },
+      {
+        foto: Communal_Coffee_7,
+      },
+    ],
   },
   {
     key: "0c6ae2da-9874-4336-ab32-ac23c2d6b03f",
     Nama: "Kurva Coffee",
-    Tempat: {
-      foto_1: Kurva_Coffee_1,
-    },
+    Tempat: [
+      {
+        foto: Kurva_Coffee_1,
+      },
+      {
+        foto: Kurva_Coffee_2,
+      },
+      {
+        foto: Kurva_Coffee_3,
+      },
+      {
+        foto: Kurva_Coffee_4,
+      },
+    ],
   },
   {
     key: "5b88790a-9ad1-489b-baef-ca9ce98eef86",
     Nama: "Happy Space Coffee",
-    Tempat: {
-      foto_1: Happy_Space_Coffee_1,
-    },
+    Tempat: [
+      {
+        foto: Happy_Space_Coffee_1,
+      },
+      {
+        foto: Happy_Space_Coffee_2,
+      },
+      {
+        foto: Happy_Space_Coffee_3,
+      },
+      {
+        foto: Happy_Space_Coffee_4,
+      },
+      {
+        foto: Happy_Space_Coffee_5,
+      },
+    ],
   },
   {
     key: "589f8b83-76aa-458a-8405-aa06770e60ac",
     Nama: "Kozi Coffee X Marawa",
-    Tempat: {
-      foto_1: Kozi_Coffee_X_Marawa_1,
-    },
+    Tempat: [
+      {
+        foto: Kozi_Coffee_X_Marawa_1,
+      },
+      {
+        foto: Kozi_Coffee_X_Marawa_2,
+      },
+      {
+        foto: Kozi_Coffee_X_Marawa_3,
+      },
+      {
+        foto: Kozi_Coffee_X_Marawa_4,
+      },
+    ],
   },
   {
     key: "4760fee0-018a-485a-8dd8-9f221b1739ed",
     Nama: "Ali Joy Coffee",
-    Tempat: {
-      foto_1: Ali_Joy_Coffee_1,
-    },
+    Tempat: [
+      {
+        foto: Ali_Joy_Coffee_1,
+      },
+      {
+        foto: Ali_Joy_Coffee_2,
+      },
+      {
+        foto: Ali_Joy_Coffee_3,
+      },
+      {
+        foto: Ali_Joy_Coffee_4,
+      },
+      {
+        foto: Ali_Joy_Coffee_5,
+      },
+    ],
   },
   {
     key: "f76b8a9e-3706-46b0-887c-c8f8fc1d5456",
@@ -192,9 +332,23 @@ export const dataPhoto = [
   {
     key: "7e9ca5b9-6510-4d8b-96c0-0f4708d50fee",
     Nama: "Desa Coffee Space",
-    Tempat: {
-      foto_1: Desa_Coffee_Space_1,
-    },
+    Tempat: [
+      {
+        foto: Desa_Coffee_Space_1,
+      },
+      {
+        foto: Desa_Coffee_Space_2,
+      },
+      {
+        foto: Desa_Coffee_Space_3,
+      },
+      {
+        foto: Desa_Coffee_Space_4,
+      },
+      {
+        foto: Desa_Coffee_Space_5,
+      },
+    ],
   },
   {
     key: "e4e01546-c9b8-474b-9a2b-1b73b630ab47",

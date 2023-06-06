@@ -44,13 +44,20 @@
   .left {
     @include flex(column, space-between, center, 1rem);
 
+    .big_photo {
+      @include flex(column, center, center, 0);
+      width: 500px;
+      height: 65vh;
+      overflow: hidden;
+    }
+
     .list_poto {
       width: 500px;
       overflow: auto;
       @include flex(row, flex-start, center, 1rem);
 
       img {
-        width: 100px;
+        width: 150px;
         height: 120px;
         cursor: pointer;
       }
@@ -132,7 +139,9 @@
     background-color: $color100;
 
     .content_row {
-      @include grid(200px, 1fr, 2rem);
+      @include grid(270px, 1fr, 2rem);
+      // @include flex(row, flex-start, center, 2rem);
+      // flex-wrap: wrap;
       margin-bottom: 2rem;
     }
 
@@ -268,6 +277,7 @@
 .component_card_list {
   cursor: pointer;
   @include flex(column, flex-start, center, 0);
+  // width: 300px;
   width: 100%;
   background-color: $color300;
   border-radius: 7px;

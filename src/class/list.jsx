@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const List = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
+  const width = window.innerWidth;
+  const postsPerPage = width >= 1650 ? 8 : 6;
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
@@ -32,7 +33,7 @@ const List = () => {
                   path={`/coffe-shop/${data.key}`}
                   key={index}
                   title={data.Nama}
-                  images={data?.Tempat?.[0]}
+                  images={data?.Tempat?.[0]?.foto}
                 />
               );
             })}
