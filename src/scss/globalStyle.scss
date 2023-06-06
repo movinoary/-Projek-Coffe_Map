@@ -25,14 +25,76 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color300;
+  background-color: $color400;
   border-radius: 10px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: $color400;
+  background-color: $color500;
+}
+
+// Page
+.page_detail_cafe {
+  @include flex(row, space-between, flex-start, 5rem);
+  @include size(100%, 87.5vh, 2% 10%);
+  background-color: $color100;
+
+  .left {
+    @include flex(column, space-between, center, 1rem);
+
+    .list_poto {
+      width: 500px;
+      overflow: auto;
+      @include flex(row, flex-start, center, 1rem);
+
+      img {
+        width: 100px;
+        height: 120px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right {
+    @include flex(column, flex-start, center, 0);
+    background-color: $color000;
+    width: 100%;
+    border: 2px solid $color500;
+
+    .title {
+      padding: 5px;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: $title;
+      background-color: $color300;
+      border-bottom: 2px solid $color500;
+    }
+
+    .content {
+      padding: 1rem;
+      div {
+        @include flex(row, flex-start, flex-start, 0);
+
+        p {
+          font-size: $bigParagraph;
+          &:nth-child(1) {
+            width: 30%;
+          }
+          &:nth-child(2) {
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    button {
+      margin-bottom: 2rem;
+      @include button($bigParagraph);
+    }
+  }
 }
 
 // Section
@@ -40,7 +102,7 @@
   @include size(100%, 90vh, 5%);
   @include flex(column, flex-end, center, 2em);
   background-size: cover;
-  background-image: url(../assets/home.png);
+  background-image: url(../assets/images/home.png);
 
   h1 {
     @include title($bigTitle);
@@ -62,25 +124,45 @@
   }
 
   .list_content {
+    width: 100%;
     padding: 2rem 4rem;
     border-radius: 8px;
-    @include grid(300px, 1fr, 2rem);
     width: 100%;
     border: 2px solid $color500;
     background-color: $color100;
+
+    .content_row {
+      @include grid(200px, 1fr, 2rem);
+      margin-bottom: 2rem;
+    }
+
+    .content_pagination {
+      @include flex(row, center, center, 10px);
+
+      .pagination_active,
+      .pagination_non_active {
+        font-size: $bigParagraph;
+        background-color: transparent;
+        border: none;
+      }
+
+      .pagination_active {
+        color: $color600;
+      }
+    }
   }
 }
 
 .section_ngopi {
-  @include size(100%, 50vh, 5% 10%);
-  @include flex(column, flex-start, flex-start, 1rem);
+  @include size(100%, 70vh, 10% 10%);
+  @include flex(column, flex-start, flex-start, 3rem);
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/about.png);
+  background-image: url(../assets/images/about.png);
 
   h1 {
-    font-size: $title;
-    width: 600px;
+    font-size: $subTitle;
+    width: 450px;
     font-weight: 500;
   }
 
@@ -184,6 +266,7 @@
 }
 
 .component_card_list {
+  cursor: pointer;
   @include flex(column, flex-start, center, 0);
   width: 100%;
   background-color: $color300;
@@ -197,7 +280,7 @@
     text-align: center;
     border-radius: 7px;
     text-transform: capitalize;
-    font-size: $subTitle;
+    font-size: $bigParagraph;
     font-weight: 400;
     border-bottom: 1px solid $color500;
   }
