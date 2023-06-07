@@ -8,10 +8,6 @@ const Detail = () => {
   const [data, setData] = useState([]);
   const [bigPoto, setBigPoto] = useState(data?.Tempat?.[0]?.foto);
 
-  useEffect(() => {
-    getData();
-  }, []);
-
   const getData = async () => {
     const response = await axios.get(
       "https://geoserver.mapid.io/layers_new/get_layer?api_key=6015daaa36324bb885749c34fe56fe13&layer_id=647c5f4dd99beff68421878e&project_id=64699c3ed2a8cc48b1a97aaf"
@@ -20,9 +16,9 @@ const Detail = () => {
     const res_data = response?.data;
 
     const find_data_api = res_data?.geojson?.features.find(
-      (d) => d.key === key
+      (d) => d?.key === key
     );
-    const find_data_poto = dataPhoto.find((d) => d.key === key);
+    const find_data_poto = dataPhoto.find((d) => d?.key === key);
 
     const body = {
       ...find_data_api,
@@ -31,8 +27,9 @@ const Detail = () => {
     setData(body);
     setBigPoto(data?.Tempat?.[0]?.foto);
   };
-
-  console.log(bigPoto);
+  useEffect(() => {
+    getData("test");
+  }, []);
 
   return (
     <main className="page_detail_cafe">
