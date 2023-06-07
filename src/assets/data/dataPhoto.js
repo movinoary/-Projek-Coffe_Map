@@ -1164,12 +1164,26 @@ export const dataPhoto = [
     ],
   },
   {
-    key: "383125d0-54f3-4c77-a179-671e21458fee",
-    Nama: "Sequel Coffee",
-  },
-  {
     key: "9f1ca733-6e0f-486e-b5f9-097850df8976",
     Nama: "Cafe D'Pakar",
+    Tempat: [
+      {
+        foto: D_pakar_1,
+      },
+      {
+        foto: D_pakar_2,
+      },
+      {
+        foto: D_pakar_3,
+      },
+      {
+        foto: D_pakar_4,
+      },
+    ],
+  },
+  {
+    key: "383125d0-54f3-4c77-a179-671e21458fee",
+    Nama: "Sequel Coffee",
   },
   {
     key: "6e5f6c03-9eaa-4a65-920c-0bde9beedf3e",
