@@ -14,7 +14,7 @@ const Nav = () => {
         <a className="menu" href="/#about">
           About
         </a>
-        <a className="menu" href="/#coffeShop">
+        <a className="menu" href="/map">
           Dago Coffe Map
         </a>
         <Link className="menu" to="/pagi-ngopi">

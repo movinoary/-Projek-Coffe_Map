@@ -427,6 +427,7 @@ export const dataPhoto = [
   },
   {
     key: "4760fee0-018a-485a-8dd8-9f221b1739ed",
+    Pagi_Ngopi: "06.00 - 09.00",
     Nama: "Ali Joy Coffee",
     Tempat: [
       {
@@ -532,10 +533,10 @@ export const dataPhoto = [
     Nama: "Box Coffice Dago",
     Tempat: [
       {
-        foto: Box_Coffice_Dago_1,
+        foto: Box_Coffice_Dago_2,
       },
       {
-        foto: Box_Coffice_Dago_2,
+        foto: Box_Coffice_Dago_1,
       },
     ],
   },
@@ -616,6 +617,7 @@ export const dataPhoto = [
   },
   {
     key: "31a1da97-2223-4df2-966e-7cb211260dd8",
+    Pagi_Ngopi: "07.30 - 10.30",
     Nama: "URRA CAFFE",
     Tempat: [
       {
@@ -634,6 +636,7 @@ export const dataPhoto = [
   },
   {
     key: "7e9ca5b9-6510-4d8b-96c0-0f4708d50fee",
+    Pagi_Ngopi: "08.00 - 10.00",
     Nama: "Desa Coffee Space",
     Tempat: [
       {
@@ -655,6 +658,7 @@ export const dataPhoto = [
   },
   {
     key: "e4e01546-c9b8-474b-9a2b-1b73b630ab47",
+    Pagi_Ngopi: "07.00 - 10.00",
     Nama: "Jiwan Coffee & Things Bandung",
     Tempat: [
       {
@@ -701,13 +705,13 @@ export const dataPhoto = [
     Nama: "Kedai Ekoffie Dago",
     Tempat: [
       {
-        foto: Kedai_Ekoffie_Dago_1,
+        foto: Kedai_Ekoffie_Dago_3,
       },
       {
         foto: Kedai_Ekoffie_Dago_2,
       },
       {
-        foto: Kedai_Ekoffie_Dago_3,
+        foto: Kedai_Ekoffie_Dago_1,
       },
     ],
   },
@@ -850,13 +854,13 @@ export const dataPhoto = [
     Nama: "Cikopi Di Cisitu",
     Tempat: [
       {
-        foto: Cikopi_Di_Cisitu_1,
+        foto: Cikopi_Di_Cisitu_3,
       },
       {
         foto: Cikopi_Di_Cisitu_2,
       },
       {
-        foto: Cikopi_Di_Cisitu_3,
+        foto: Cikopi_Di_Cisitu_1,
       },
     ],
   },
@@ -1009,7 +1013,7 @@ export const dataPhoto = [
     Nama: "Kopi Warga",
     Tempat: [
       {
-        foto: Kopi_Warga_1,
+        foto: Kopi_Warga_4,
       },
       {
         foto: Kopi_Warga_2,
@@ -1018,12 +1022,13 @@ export const dataPhoto = [
         foto: Kopi_Warga_3,
       },
       {
-        foto: Kopi_Warga_4,
+        foto: Kopi_Warga_1,
       },
     ],
   },
   {
     key: "272e3124-d784-4fd0-a981-54a943806391",
+    Pagi_Ngopi: "08.00 - 10.00",
     Nama: "Di Dago",
     Tempat: [
       {
@@ -1168,49 +1173,17 @@ export const dataPhoto = [
     Nama: "Cafe D'Pakar",
     Tempat: [
       {
-        foto: D_pakar_1,
+        foto: D_pakar_3,
       },
       {
         foto: D_pakar_2,
       },
       {
-        foto: D_pakar_3,
+        foto: D_pakar_1,
       },
       {
         foto: D_pakar_4,
       },
     ],
-  },
-  {
-    key: "383125d0-54f3-4c77-a179-671e21458fee",
-    Nama: "Sequel Coffee",
-  },
-  {
-    key: "6e5f6c03-9eaa-4a65-920c-0bde9beedf3e",
-    Nama: "Kochi Coffee Dago",
-  },
-  {
-    key: "ff81564c-d8d1-44d0-b64b-04d9941a1198",
-    Nama: "Kopi Selasar Sunaryo",
-  },
-  {
-    key: "63023f68-c65e-4040-a28c-ca6c688d6614",
-    Nama: "Gettea Coffee Dago",
-  },
-  {
-    key: "534b565b-d86b-45f5-a0b2-779b5d2e7852",
-    Nama: "Codeart Coffee",
-  },
-  {
-    key: "99f627b1-bd6c-4d0f-ab89-f4db275556c0",
-    Nama: "HabenSyare Coffee Dago",
-  },
-  {
-    key: "34879b53-1874-4a43-8b93-88d36e38b4c5",
-    Nama: "Ben's Coffee Dago",
-  },
-  {
-    key: "b9ee72dc-8d69-4d61-906d-3062b8c60ef7",
-    Nama: "Warkop Legend",
   },
 ];

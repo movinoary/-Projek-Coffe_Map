@@ -38,7 +38,7 @@
 // Page
 .page_detail_cafe {
   @include flex(row, space-between, flex-start, 5rem);
-  @include size(100%, 87.5vh, 2% 10%);
+  @include size(100%, 87.5vh, 4rem 10%);
   background-color: $color100;
 
   .left {
@@ -69,6 +69,7 @@
     background-color: $color000;
     width: 100%;
     border: 2px solid $color500;
+    position: relative;
 
     .title {
       padding: 5px;
@@ -78,6 +79,27 @@
       font-size: $title;
       background-color: $color300;
       border-bottom: 2px solid $color500;
+    }
+
+    .card_spesial {
+      @include flex(column, center, center, 0);
+      position: absolute;
+      top: -3rem;
+      right: -3rem;
+      @include size(140px, 140px, 10px);
+      border-radius: 100px;
+      background-color: #e8ff8a;
+      border: 1px solid $color400;
+      text-align: center;
+
+      h1 {
+        font-weight: 500;
+        font-size: $bigParagraph;
+      }
+      h2 {
+        font-weight: 400;
+        font-size: $paragraph;
+      }
     }
 
     .content {
@@ -101,6 +123,22 @@
       margin-bottom: 2rem;
       @include button($bigParagraph);
     }
+  }
+}
+
+.page_spesial {
+  @include flex(column, flex-start, flex-start, 0);
+  padding: 5% 10%;
+  background-color: $color300;
+
+  .title {
+    background-color: $color200;
+    font-weight: 600;
+    border: 2px solid $color400;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 3rem;
+    font-size: $subTitle;
   }
 }
 
@@ -234,6 +272,18 @@
         font-weight: 500;
       }
     }
+  }
+}
+
+.section_spesial {
+  width: 100%;
+  background-color: $color100;
+  padding: 3rem;
+  border: 2px solid $color400;
+  border-radius: 0 8px 8px 8px;
+
+  .row {
+    @include grid(270px, 1fr, 2rem);
   }
 }
 

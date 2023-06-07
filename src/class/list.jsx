@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { dataPhoto } from "../assets/data/dataPhoto";
-import { useNavigate } from "react-router-dom";
+import Card from "../components/card";
 
 const List = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,16 +59,3 @@ const List = () => {
 };
 
 export default List;
-
-const Card = ({ title, images, path }) => {
-  const navigate = useNavigate();
-
-  return (
-    <figure className="component_card_list" onClick={() => navigate(path)}>
-      <h2>{title}</h2>
-      <div>
-        <img src={images} alt="coffe" />
-      </div>
-    </figure>
-  );
-};

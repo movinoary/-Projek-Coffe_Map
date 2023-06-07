@@ -5,6 +5,7 @@ import { dataPhoto } from "../assets/data/dataPhoto";
 
 const Detail = () => {
   const { key } = useParams();
+  const path = window.location.pathname.slice(1, 11);
   const [data, setData] = useState([]);
   const [bigPoto, setBigPoto] = useState(data?.Tempat?.[0]?.foto);
 
@@ -55,6 +56,12 @@ const Detail = () => {
       </section>
       <section className="right">
         <h1 className="title">{data?.Nama}</h1>
+        {path === "pagi-ngopi" && (
+          <div className="card_spesial">
+            <h1>Pagi ngopi</h1>
+            <h2>{data?.Pagi_Ngopi || " "}</h2>
+          </div>
+        )}
         <div className="content">
           <div>
             <p>Operasional </p>
