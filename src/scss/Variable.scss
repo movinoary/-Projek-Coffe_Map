@@ -9,8 +9,8 @@ $color600: #ff3333;
 
 // font Size
 $bigTitle: 3.5rem;
-$title: 2rem;
-$subTitle: 1.8rem;
+$title: 2.3rem;
+$subTitle: 2rem;
 $bigParagraph: 1.3rem;
 $paragraph: 1rem;
 $small: 0.7rem;
@@ -42,6 +42,14 @@ $superSlow: all ease-in-out 1s;
   gap: $gap;
 }
 
+@mixin paragraph($column) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $column;
+  -webkit-box-orient: vertical;
+}
+
 @mixin title($size) {
   text-align: center;
   font-size: $size;
@@ -59,6 +67,7 @@ $superSlow: all ease-in-out 1s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   transition: $fast;
+  cursor: pointer;
 
   &:hover {
     transition: $fast;

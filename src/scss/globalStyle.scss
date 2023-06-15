@@ -17,7 +17,8 @@
 
 ::-webkit-scrollbar {
   width: 17px;
-  z-index: 1;
+  // z-index: 1;
+  z-index: 999;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,8 +39,9 @@
 // Page
 .page_detail_cafe {
   @include flex(row, space-between, flex-start, 5rem);
-  @include size(100%, 87.5vh, 4rem 10%);
+  @include size(100%, 100vh, 10% 10% 4% 10%);
   background-color: $color100;
+  overflow: auto;
 
   .left {
     @include flex(column, space-between, center, 1rem);
@@ -47,7 +49,7 @@
     .big_photo {
       @include flex(column, center, center, 0);
       width: 500px;
-      height: 65vh;
+      height: 55vh;
       overflow: hidden;
     }
 
@@ -67,7 +69,7 @@
   .right {
     @include flex(column, flex-start, center, 0);
     background-color: $color000;
-    width: 100%;
+    width: 50%;
     border: 2px solid $color500;
     position: relative;
 
@@ -76,7 +78,7 @@
       width: 100%;
       text-align: center;
       font-weight: 500;
-      font-size: $title;
+      font-size: $subTitle;
       background-color: $color300;
       border-bottom: 2px solid $color500;
     }
@@ -119,16 +121,76 @@
       }
     }
 
-    button {
-      margin-bottom: 2rem;
-      @include button($bigParagraph);
+    .row_button {
+      @include flex(row, center, center, 2rem);
+      margin-top: 1rem;
+
+      a {
+        text-decoration: none;
+        margin-bottom: 2rem;
+        @include button($bigParagraph);
+      }
     }
+
+    .menu {
+      padding-bottom: 2rem;
+      width: 90%;
+
+      p {
+        font-size: $bigParagraph;
+        margin-bottom: 1rem;
+      }
+      .row {
+        width: 100%;
+        @include flex(row, flex-start, flex-start, 2rem);
+        overflow: auto;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.page_full_images {
+  @include size(100vw, 100vh, 0);
+  @include flex(row, center, center, 0);
+  background-color: rgba($color: $color500, $alpha: 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    border: none;
+    background-color: $color000;
+    border-radius: 100px;
+    color: $color600;
+    font-size: $subTitle;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  img {
+    max-width: 80vh;
+    max-height: 90vh;
   }
 }
 
 .page_spesial {
   @include flex(column, flex-start, flex-start, 0);
-  padding: 5% 10%;
+  @include size(100%, 100vh, 10% 10% 4% 10%);
+  overflow: auto;
+
+  // padding: 5% 10%;
   background-color: $color300;
 
   .title {
@@ -144,17 +206,33 @@
 
 // Section
 .section_header {
-  @include size(100%, 90vh, 5%);
-  @include flex(column, flex-end, center, 2em);
-  background-size: cover;
-  background-image: url(../assets/images/home.png);
+  position: relative;
+  // background-size: cover;
+  // background-position: center;
+  // background-image: url(../assets/images/home.png);
 
-  h1 {
-    @include title($bigTitle);
+  .background {
+    @include size(100%, 100vh, 0);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  button {
-    @include button($subTitle);
+  .title {
+    @include size(100%, 100vh, 5%);
+    @include flex(column, flex-end, center, 2em);
+    h1 {
+      @include title($bigTitle);
+    }
+
+    button {
+      @include button($subTitle);
+    }
   }
 }
 
@@ -203,29 +281,49 @@
 .section_ngopi {
   @include size(100%, 70vh, 10% 10%);
   @include flex(column, flex-start, flex-start, 3rem);
-  background-size: cover;
-  background-position: center;
-  background-image: url(../assets/images/about.png);
+  position: relative;
+  background-color: #fce1d8;
+
+  .background {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   h1 {
+    z-index: 5;
     font-size: $subTitle;
     width: 450px;
     font-weight: 500;
   }
 
   button {
+    z-index: 5;
     @include button($subTitle);
   }
 }
 
 .section_about {
   @include flex(row, space-between, center, 1rem);
-  @include size(100%, 80vh, 5% 10%);
+  @include size(100%, 100vh, 5rem 10%);
   background-color: $color200;
 
   div {
     @include flex(column, center, center, 1rem);
     width: 100%;
+
+    img {
+      &:nth-child(1) {
+        width: 150px;
+      }
+    }
 
     h1 {
       font-size: $title;
@@ -291,6 +389,8 @@
 .component_nav {
   @include flex(column, center, center, 0);
   width: 100%;
+  z-index: 99;
+  position: absolute;
 
   .top {
     @include flex(column, center, center, 0);
@@ -311,6 +411,7 @@
     padding: 10px 0;
 
     .menu {
+      cursor: pointer;
       transition: $fast;
       font-size: $bigParagraph;
       text-decoration: none;
@@ -318,7 +419,7 @@
 
       &:hover {
         transition: $fast;
-        color: $color300;
+        color: $color600;
       }
     }
   }
@@ -336,6 +437,7 @@
   // box-shadow: 0 0 5px $color400;
 
   h2 {
+    @include paragraph(1);
     width: 100%;
     text-align: center;
     border-radius: 7px;
@@ -352,6 +454,494 @@
       border-radius: 5px;
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+// MAP
+.leaflet-container {
+  height: 100vh;
+  z-index: 10;
+}
+
+.map-container {
+  height: 400px;
+}
+
+.page_map {
+  width: 100%;
+  height: 100vh;
+}
+
+.map_search {
+  position: fixed;
+  z-index: 99;
+  top: 10rem;
+  right: 2rem;
+
+  input,
+  select {
+    background-color: #fff;
+    padding: 5px 2rem 5px 10px;
+    font-size: $paragraph;
+    outline: none;
+    border-radius: 7px;
+    border: 3px solid $color400;
+    margin-right: -1.5rem;
+  }
+
+  button {
+    @include button($paragraph);
+  }
+}
+
+.map_icon {
+  @include flex(column, center, center, 0);
+  // background-color: #e8ff8a;
+  cursor: pointer;
+  * {
+    transition: $fast;
+  }
+
+  p {
+    text-align: center;
+    font-size: 0;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid $color400;
+    @include flex(column, center, center, 0);
+    img {
+      width: 30px;
+    }
+  }
+
+  &:hover {
+    p {
+      text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+      font-size: $paragraph;
+    }
+  }
+}
+
+.map_popup {
+  @include flex(column, flex-start, center, 10px);
+  max-width: 300px;
+  position: fixed;
+  z-index: 999;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $color300;
+  border: 2px solid $color400;
+  border-radius: 10px;
+
+  h1 {
+    font-size: $bigParagraph;
+    padding: 1rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $color400;
+    border-radius: 10px;
+  }
+
+  img {
+    border-radius: 8px;
+    width: 250px;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    font-size: $paragraph;
+    padding: 0 1rem;
+  }
+
+  button {
+    &:first-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      border: none;
+      border-bottom: 2px solid $color400;
+      border-left: 2px solid $color400;
+      background-color: $color600;
+      color: $color000;
+      font-size: $paragraph;
+      border-radius: 0 10px 0 10px;
+      cursor: pointer;
+    }
+    &:last-child {
+      @include button($paragraph);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .mobile_nav {
+    @include flex(row, flex-start, flex-start, 0);
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+
+    .top {
+      @include flex(row, space-between, center, 0);
+      width: 100%;
+      padding: 10px 2rem;
+
+      h1 {
+        font-size: $title;
+      }
+    }
+
+    .bottom_close {
+      position: absolute;
+      left: 0;
+      width: 35%;
+      height: 100vh;
+    }
+    .bottom,
+    .bottom_active {
+      z-index: 999;
+      @include flex(column, flex-start, flex-start, 1rem);
+      @include size(65%, 100vh, 0);
+      position: absolute;
+      right: 0;
+      background-color: $color200;
+      border: 1px solid $color500;
+      padding: 10px 0;
+      transition: $fast;
+
+      .menu {
+        padding: 1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: $fast;
+        font-size: $bigParagraph;
+        text-decoration: none;
+        color: $color400;
+
+        &:hover {
+          transition: $fast;
+          color: $color600;
+        }
+      }
+    }
+
+    .bottom {
+      margin-right: -300px;
+    }
+  }
+
+  .section_header {
+    @include size(100%, 100vh, 3%);
+    .title {
+      @include size(100%, 90vh, 3%);
+      h1 {
+        @include title($subTitle);
+      }
+
+      button {
+        @include button($bigParagraph);
+      }
+    }
+  }
+
+  .section_list {
+    .list_content {
+      padding: 1rem;
+
+      .content_row {
+        @include grid(130px, 1fr, 1rem);
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .component_card_list {
+    h2 {
+      @include paragraph(1);
+      font-size: $paragraph;
+    }
+    div {
+      width: 100%;
+      height: 150px;
+      padding: 5px;
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .section_ngopi {
+    @include size(100%, 80vh, 10% 10%);
+    @include flex(column, flex-start, center, 2rem);
+
+    h1 {
+      z-index: 5;
+      font-size: $bigParagraph;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+    }
+    .img_phone {
+      z-index: 5;
+      width: 150px;
+    }
+
+    .background {
+      height: 80vh;
+    }
+
+    button {
+      z-index: 5;
+      @include button($bigParagraph);
+    }
+  }
+
+  .section_about {
+    @include size(100%, 100vh, 5%);
+    background-color: $color200;
+    @include flex(column-reverse, center, center, 3rem);
+
+    div {
+      @include flex(column, center, center, 1rem);
+      width: 100%;
+
+      img {
+        &:nth-child(1) {
+          width: 100px;
+        }
+        &:nth-child(2) {
+          width: 300px;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: $bigParagraph;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .section_footer {
+    padding: 5%;
+    @include flex(column, center, center, 1rem);
+
+    .left {
+      img {
+        width: 50px;
+      }
+    }
+
+    .right {
+      h2 {
+        font-size: $bigParagraph;
+        font-weight: 700;
+      }
+
+      p {
+        &:nth-child(2) {
+          font-size: $paragraph;
+          font-weight: 600;
+        }
+
+        &:nth-child(3) {
+          font-size: $small;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .map_search {
+    position: fixed;
+    z-index: 88;
+    top: 6rem;
+    right: 0;
+    width: 100%;
+    @include flex(row, center, center, 0);
+
+    input,
+    select {
+      padding: 5px 1rem 5px 5px;
+      font-size: $small;
+      outline: none;
+      border-radius: 7px;
+      border: 3px solid $color400;
+      margin-right: -2rem;
+    }
+
+    button {
+      @include button($small);
+    }
+  }
+
+  .map_popup {
+    @include flex(column, flex-start, center, 10px);
+    max-width: 200px;
+    bottom: 1rem;
+    right: 1rem;
+
+    h1 {
+      font-size: $paragraph;
+      padding: 7px;
+      font-weight: 600;
+    }
+
+    img {
+      border-radius: 8px;
+      width: 180px;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: $small;
+      padding: 0 7px;
+    }
+
+    button {
+      &:first-child {
+        font-size: $small;
+      }
+      &:last-child {
+        @include button($small);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .page_spesial {
+    @include flex(column, flex-start, flex-start, 0);
+    @include size(100%, 100vh, 7rem 5% 5% 5%);
+    overflow: auto;
+    background-color: $color300;
+
+    .title {
+      padding: 10px 20px;
+      font-size: $bigParagraph;
+    }
+  }
+
+  .section_spesial {
+    padding: 1rem;
+
+    .row {
+      @include grid(130px, 1fr, 1rem);
+    }
+  }
+
+  .page_detail_cafe {
+    @include flex(column, space-between, flex-start, 3rem);
+    @include size(100%, 100vh, 7rem 5% 5% 5%);
+
+    .left {
+      width: 100%;
+      .big_photo {
+        width: 100%;
+        height: 50vh;
+      }
+
+      .list_poto {
+        width: 100%;
+        overflow: auto;
+        @include flex(row, flex-start, center, 7px);
+
+        img {
+          width: 150px;
+          height: 120px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+
+      .title {
+        font-size: $bigParagraph;
+      }
+
+      .card_spesial {
+        top: -3rem;
+        right: -1.5rem;
+        @include size(100px, 100px, 5px);
+
+        h1 {
+          font-size: $paragraph;
+        }
+        h2 {
+          font-size: $small;
+        }
+      }
+
+      .content {
+        padding: 10px;
+        div {
+          p {
+            font-size: $small;
+            &:nth-child(1) {
+              width: 35%;
+            }
+            &:nth-child(2) {
+              width: 55%;
+            }
+          }
+        }
+      }
+
+      .row_button {
+        @include flex(row, center, center, 10px);
+        margin-top: 10px;
+
+        a {
+          @include button($small);
+        }
+      }
+
+      .menu {
+        padding-bottom: 1rem;
+
+        p {
+          font-size: $paragraph;
+          margin-bottom: 10px;
+        }
+        .row {
+          width: 100%;
+          @include flex(row, flex-start, flex-start, 10px);
+          overflow: auto;
+        }
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  .page_full_images {
+    button {
+      width: 30px;
+      height: 30px;
+      top: 2rem;
+      right: 2rem;
+      font-size: $paragraph;
+    }
+
+    img {
+      max-width: 50vh;
+      max-height: 80vh;
     }
   }
 }

@@ -5,7 +5,6 @@ import Card from "../components/card";
 const SpesialContent = () => {
   const Data = dataPhoto.filter((item) => item?.Pagi_Ngopi);
 
-  console.log(Data);
   return (
     <section className="page_spesial">
       <h1 className="title">Ngopi Pagi di Dago</h1>
@@ -13,7 +12,7 @@ const SpesialContent = () => {
         <div className="row">
           {Data.map((data, index) => (
             <Card
-              path={`/pagi-ngopi/${data.key}`}
+              path={`/detail/pagi-ngopi/${data.key}`}
               key={index}
               title={data.Nama}
               images={data?.Tempat?.[0]?.foto}

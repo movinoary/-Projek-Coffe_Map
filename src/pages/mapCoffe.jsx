@@ -5,7 +5,7 @@ import axios from "axios";
 import icon from "../assets/icon/kopi.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function Mapppp() {
+export default function MapCoffe() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [dataPopup, setDataPopup] = useState({});
@@ -80,6 +80,7 @@ export default function Mapppp() {
       width="100%"
       height="100vh"
       onViewportChange={(viewport) => setViewport(viewport)}
+      mapStyle={"mapbox://styles/vinoarystio/clioob306008q01r191wgasf0"}
       mapboxApiAccessToken="pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2w2czRtNzYxMG1xbDNrbGo1N3k4a3NuciJ9.VHdXy-kV3UZLqcFF601K6A"
     >
       <section className="map_search">
