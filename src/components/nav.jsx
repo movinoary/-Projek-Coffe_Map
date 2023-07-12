@@ -45,7 +45,7 @@ const Nav = () => {
 
   const handleNavigate = (data) => {
     if (data) {
-      navigate(data.to);
+      navigate.push(data.to);
     }
     setActive(false);
   };

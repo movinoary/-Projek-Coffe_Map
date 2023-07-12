@@ -337,8 +337,8 @@
 }
 
 .section_footer {
-  padding: 3% 10%;
-  @include flex(row, center, center, 5rem);
+  padding: 1% 10%;
+  @include flex(row, center, center, 1rem);
 
   .left {
     @include flex(row, center, center, 1rem);
