@@ -73,13 +73,9 @@ export default function MapCoffe() {
       (d) => d.properties.Nama === input.cafe
     );
 
-    console.log(find_data);
-
     setDataPopup(find_data);
     setPopUp(true);
   };
-
-  console.log(dataPopup);
 
   return (
     <Map

@@ -17,11 +17,14 @@ const Detail = () => {
     );
 
     const res_data = response?.data;
-
-    const find_data_api = res_data?.geojson?.features.find(
-      (d) => d?.key === key
-    );
+    // console.log("res_data =", res_data);
     const find_data_poto = dataPhoto.find((d) => d?.key === key);
+    const find_data_api = res_data?.features.find(
+      (d) => d?.properties?.Nama === find_data_poto.Nama
+    );
+
+    // console.log("find_data_api =", res_data);
+    // console.log("find_data_poto =", find_data_poto.Nama);
 
     const body = {
       ...find_data_api,
@@ -39,10 +42,9 @@ const Detail = () => {
     setModal(true);
   };
 
+  console.log(data);
+
   const handleCloseModal = () => setModal(!modal);
-
-  console.log(path);
-
   return (
     <>
       {modal ? (
