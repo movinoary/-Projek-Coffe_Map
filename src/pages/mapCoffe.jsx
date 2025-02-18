@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+// import Map, { Marker } from "react-map-gl";
+import Map, { Marker } from "react-map-gl/mapbox";
 import { dataPhoto } from "../assets/data/dataPhoto";
 import axios from "axios";
 import icon from "../assets/icon/kopi.svg";
@@ -23,8 +24,10 @@ export default function MapCoffe() {
     );
 
     const res_data = response?.data;
-    const bind_data = res_data.geojson.features.map((item) => {
-      const data_poto = dataPhoto.find((d) => d?.key === item.key);
+    const bind_data = res_data.features.map((item) => {
+      const data_poto = dataPhoto.find(
+        (d) => d?.Nama === item?.properties.Nama
+      );
 
       return {
         ...item,
@@ -67,21 +70,27 @@ export default function MapCoffe() {
 
   const handleSearch = () => {
     const find_data = data.geojson?.features.find(
-      (d) => d.properties.name === input.cafe
+      (d) => d.properties.Nama === input.cafe
     );
+
+    console.log(find_data);
 
     setDataPopup(find_data);
     setPopUp(true);
   };
 
+  console.log(dataPopup);
+
   return (
-    <ReactMapGL
-      {...viewport}
-      width="100%"
-      height="100vh"
+    <Map
+      // {...viewport}
+      initialViewState={viewport}
+      // width="100%"
+      // height="100vh"
+      style={{ width: "100%", height: "100vh" }}
       onViewportChange={(viewport) => setViewport(viewport)}
       mapStyle={"mapbox://styles/vinoarystio/clioob306008q01r191wgasf0"}
-      mapboxApiAccessToken="pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2w2czRtNzYxMG1xbDNrbGo1N3k4a3NuciJ9.VHdXy-kV3UZLqcFF601K6A"
+      mapboxAccessToken="pk.eyJ1Ijoidmlub2FyeXN0aW8iLCJhIjoiY2x2M2JhMXlmMHBlaTJsb3FsM3hnNzBvOCJ9.9t-e--GUark8BwfBuRDchg"
     >
       <section className="map_search">
         {/* <input type="text" placeholder="Coffe Shop..." /> */}
@@ -91,8 +100,8 @@ export default function MapCoffe() {
             .filter((item) => item?.data_poto)
             .map((data, index) => {
               return (
-                <option key={index} value={data.properties.name}>
-                  {data.properties.name}
+                <option key={index} value={data.properties.Nama}>
+                  {data.properties.Nama}
                 </option>
               );
             })}
@@ -114,7 +123,9 @@ export default function MapCoffe() {
           />
           <p>{dataPopup?.properties?.Alamat}</p>
           <p>{dataPopup?.properties?.["Jam Operasional"]}</p>
-          <button onClick={() => navigate(`/coffe-shop/${dataPopup?.key}`)}>
+          <button
+            onClick={() => navigate(`/coffe-shop/${dataPopup?.data_poto?.key}`)}
+          >
             Info Lengkap
           </button>
         </section>
@@ -123,6 +134,7 @@ export default function MapCoffe() {
       {data?.geojson?.features
         .filter((item) => item?.data_poto)
         .map((data, index) => {
+          // console.log(data);
           return (
             <Marker
               key={index}
@@ -131,26 +143,28 @@ export default function MapCoffe() {
             >
               <div className="map_icon" onClick={() => handleClick(data)}>
                 <p style={{ zIndex: `${index + 50}` }}>
-                  {data?.properties?.name}
+                  {data?.properties?.Nama}
                 </p>
                 <div
                   className="icon"
                   style={{
                     zIndex: `${index - 50}`,
                     backgroundColor:
-                      data?.key === dataPopup?.key ? "#786257" : "#f5e8d8",
+                      data?.properties?.Nama === dataPopup?.data_poto?.Nama
+                        ? "#786257"
+                        : "#f5e8d8",
                     border:
-                      data?.key === dataPopup?.key
+                      data?.properties?.Nama === dataPopup?.data_poto?.Nama
                         ? "1px solid #f5e8d8"
                         : "1px solid #786257",
                   }}
                 >
-                  <img src={icon} alt={data?.properties?.name} />
+                  <img src={icon} alt={data?.properties?.Nama} />
                 </div>
               </div>
             </Marker>
           );
         })}
-    </ReactMapGL>
+    </Map>
   );
 }
