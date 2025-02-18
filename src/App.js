@@ -6,7 +6,6 @@ import Detail from "./pages/detail";
 import SpesialContent from "./pages/spesialContent";
 import MapCoffe from "./pages/mapCoffe";
 import Menu from "./pages/menu";
-import ViewMap from "./pages/map";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <Route path="/detail/pagi-ngopi/:key" element={<Detail />} />
         <Route path="/menu/:key" element={<Menu />} />
         <Route path="/map" element={<MapCoffe />} />
-        {/* <Route path="/map" element={<ViewMap />} /> */}
       </Routes>
     </>
   );
