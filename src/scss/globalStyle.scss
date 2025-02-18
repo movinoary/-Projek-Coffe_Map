@@ -583,6 +583,40 @@
   }
 }
 
+// Loader
+.loader {
+  width: 200px;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s all ease;
+  .satu {
+    width: 50px;
+    height: 4px;
+    background-color: $color400;
+    transition: 0.5s all ease;
+  }
+  .dua {
+    width: 100px;
+    height: 4px;
+    background-color: $color400;
+    transition: 0.5s all ease;
+  }
+  .tiga {
+    width: 150px;
+    height: 4px;
+    background-color: $color400;
+    transition: 0.5s all ease;
+  }
+  .empat {
+    width: 200px;
+    height: 4px;
+    background-color: $color400;
+    transition: 0.5s all ease;
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 576px) {
   .mobile_nav {
     @include flex(row, flex-start, flex-start, 0);
